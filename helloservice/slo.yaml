@@ -32,5 +32,4 @@ objectives:
           - "<10"
 total_score:
   pass: "90%"
-  fail: "75%"
-  warning: "65%"
+  warning: "85%"
