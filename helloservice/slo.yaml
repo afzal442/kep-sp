@@ -10,9 +10,12 @@ objectives:
     pass:
       - criteria:
           - "<=0.4"
+     fail:
+      - criteria:
+          - "=0.1"
     warning:
       - criteria:
-          - "<=0.1"
+          - "<0.1"
   - sli: request_throughput
     displayName: "Request Throughput"
     pass:
@@ -32,4 +35,5 @@ objectives:
           - "<10"
 total_score:
   pass: "90%"
-  warning: "75%"
+  fail: "75%"
+  warning: "65%"
