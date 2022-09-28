@@ -10,9 +10,6 @@ objectives:
     pass:
       - criteria:
           - "<=0.4"
-     fail:
-      - criteria:
-          - "=0.1"
     warning:
       - criteria:
           - "<0.1"
