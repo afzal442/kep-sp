@@ -12,7 +12,7 @@ objectives:
           - "<=0.4"
     warning:
       - criteria:
-          - "<0.1"
+          - "<=0.1"
   - sli: request_throughput
     displayName: "Request Throughput"
     pass:
