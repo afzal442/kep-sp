@@ -25,3 +25,15 @@ spec:
       subscriptionID: 40d6cd1e-ef47-4423-a0b8-28979cef4430
       sendFinished: true
       sendStarted: true
+    - type: sh.keptn.event.evaluation.finished
+      requests:
+        - url: https://events.pagerduty.com/v2/enqueue
+          payload: >-
+            {	"payload": {		"summary": "Keptn Evaluation: {{.data.result}}",		"timestamp": {{.time}},		"severity": "{{.data.result}}",		"source": "http://152.67.28.185/bridge/project/myapp/",		"component": "qa",		"group": "prod-datapipe"	},	"routing_key": "55ddf4914b4a4904c0776c7896eab557",	"dedup_key": "srv01/qa",	"event_action": "trigger",	"client": "Sample Monitoring Service",	"client_url": "http://152.67.28.185/bridge"}
+          headers:
+            - key: Content-Type
+              value: application/json
+          method: POST
+      subscriptionID: bd20717d-adc3-4982-acd3-c41c96df8b00
+      sendFinished: false
+      sendStarted: false
